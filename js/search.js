@@ -18,9 +18,9 @@ Search.prototype.getDocsBySymptom = function(userSymptom, showDocs) {
 Search.prototype.getDocProfile = function (uid, showProfile) {
   $.get('https://api.betterdoctor.com/2016-03-01/doctors/' + uid +'?user_key=' + apiKey)
   .then(function(result) {
+    console.log(result.data);
     var profile = result.data.profile;
     showProfile(profile);
-    console.log(profile);
   })
   .fail(function(error) {
     console.log('ERROR');
