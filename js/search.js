@@ -16,4 +16,14 @@ Search.prototype.getDocsBySymptom = function(userSymptom, showDocs) {
     });
 }
 
+Search.prototype.getDocProfile = function (uid) {
+  $.get('https://api.betterdoctor.com/2016-03-01/doctors/' + uid +'?user_key=' + apiKey)
+  .then(function(result) {
+    console.log(result);
+  })
+  .fail(function(error) {
+    console.log('ERROR');
+  });
+}
+
 exports.searchModule = Search;
