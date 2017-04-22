@@ -10,30 +10,40 @@
   </head>
   <body>
     <div class="container">
-      <div class="page-header">
-        <h1>buscaDoc</h1>
-      </div>
+      <nav class="navbar navbar-default navbar-static-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a href="#"><h1>buscaDoc</h1></a>
+          </div>
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="#">by Specialty</a></li>
+            <li><a href="#">by Insurance</a></li>
+          </ul>
+        </div>
+      </nav>
       <div class="row">
         <p>Welcome to buscaDoc! Your can enter a symptom you have and see doctors in the area that can treat you!</p>
       </div>
       <div class="row">
-        <div class="col-md-4 col-offset-5">
-          <form id="docsBySymptom">
-            <div class="form-group">
-              <label for="userSymptom"> Enter your symptom</label>
-              <input id="userSymptom" type="text" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Get Doctors</button>
-          </form>
+        <div class="col-md-6">
+          <div class="well">
+            <form id="docsBySymptom">
+              <div class="form-group">
+                <label for="userSymptom">Find a Doc!</label>
+                <input id="userSymptom" type="text" class="form-control" placeholder="Enter a keyword like symptom, doctor specialty, or doctor name">
+              </div>
+              <button type="submit" class="btn btn-success">Search</button>
+            </form>
+          </div>
         </div>
       </div>
       <div class="row">
         <div id="docProfile">
 
         </div>
-        <ul id="docs">
+        <div id="docs">
 
-        </ul>
+        </div>
       </div>
     </div>
   </body>

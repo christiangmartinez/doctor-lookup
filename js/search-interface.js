@@ -5,7 +5,7 @@ var showDocs = function(docs) {
   $('#docs').empty();
   $('#docProfile').empty();
   docs.forEach(function(doc) {
-    $('#docs').append('<li><h4 id="' + doc.uid + '" class="docName">' + doc.profile.first_name + ' ' + doc.profile.last_name + ', ' + doc.profile.title + '</h4><img src="' + doc.profile.image_url + '"alt="' + doc.profile.slug + '"></li>');
+    $('#docs').append('<div class="col-md-4" <li><h4 id="' + doc.uid + '" class="docName">' + doc.profile.first_name + ' ' + doc.profile.last_name + ', ' + doc.profile.title + '</h4><img src="' + doc.profile.image_url + '"alt="' + doc.profile.slug + '"></li></div>');
   });
 }
 
