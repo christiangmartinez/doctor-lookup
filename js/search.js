@@ -27,4 +27,16 @@ Search.prototype.getDocProfile = function (uid, showProfile) {
   });
 }
 
+Search.prototype.getSpecialties = function (showSpecialties) {
+  $.get('https://api.betterdoctor.com/2016-03-01/specialties?limit=20&user_key=' + apiKey)
+  .then(function(result) {
+    console.log('BLAAARG');
+    var specialties = result.data;
+    console.log(specialties[0].name);
+  })
+  .fail(function(error) {
+    console.log("meltdown");
+  });
+}
+
 exports.searchModule = Search;

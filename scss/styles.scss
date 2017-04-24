@@ -1,0 +1,42 @@
+$blue : #3bb0db;
+$yellow : #ffd800;
+$grey: #f9f9f9;
+
+body {
+
+}
+
+.navbar {
+  background-color: $blue;
+}
+
+h1 {
+  color: white;
+}
+
+.btn-default {
+  background-color: $blue;
+  color: white;
+}
+.btn-default:hover {
+  background-color: $blue;
+  color: $yellow;
+}
+
+#buscadoc {
+  color: $yellow;
+}
+
+.well {
+  background-color: $grey;
+  border: none;
+}
+
+.docName {
+  color: $blue;
+}
+
+.docName:hover {
+  color: $yellow;
+  cursor: pointer;
+}

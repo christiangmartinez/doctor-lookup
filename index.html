@@ -3,26 +3,27 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="build/css/vendor.css">
-<script src="build/js/vendor.min.js"></script>
-<script type="text/javascript" src="build/js/app.js"></script>
-
-    <title>doctor lookup</title>
+    <link rel="stylesheet" href="build/css/styles.css">
+    <script src="build/js/vendor.min.js"></script>
+    <script type="text/javascript" src="build/js/app.js"></script>
+    <title>buscaDoc</title>
   </head>
   <body>
     <div class="container">
-      <nav class="navbar navbar-default navbar-static-top">
+      <nav class="navbar navbar-primary navbar-static-top">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a href="#"><h1>buscaDoc</h1></a>
+            <h1>busca<span id="buscadoc">Doc</span></h1>
           </div>
-          <ul class="nav navbar-nav navbar-left">
-            <li><a href="#">by Specialty</a></li>
+          <!-- <ul class="nav navbar-nav navbar-left">
+            <li id="bySpecialty" type="button">by Specialty</li>
             <li><a href="#">by Insurance</a></li>
-          </ul>
+            <li><a href="#">by Practice</a></li>
+          </ul> -->
         </div>
       </nav>
       <div class="row">
-        <p>Welcome to buscaDoc! Your can enter a symptom you have and see doctors in the area that can treat you!</p>
+        <p id="intro">Welcome to buscaDoc! Your can enter a symptom you have and see doctors in the area that can treat you!</p>
       </div>
       <div class="row">
         <div class="col-md-6">
@@ -32,10 +33,15 @@
                 <label for="userSymptom">Find a Doc!</label>
                 <input id="userSymptom" type="text" class="form-control" placeholder="Enter a keyword like symptom, doctor specialty, or doctor name">
               </div>
-              <button type="submit" class="btn btn-success">Search</button>
+              <button type="submit" class="btn btn-default">Search</button>
             </form>
           </div>
         </div>
+      </div>
+      <div >
+        <ul id="allSpecialties">
+
+        </ul>
       </div>
       <div class="row">
         <div id="docProfile">
